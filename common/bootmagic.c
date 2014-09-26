@@ -18,8 +18,9 @@ void bootmagic(void)
         eeconfig_init();
     }
 
+    print("Bootmagic scan in 2 seconds");
+    _delay_ms(2000);
     /* do scans in case of bounce */
-    print("boogmagic scan: ... ");
     uint8_t scan = 100;
     while (scan--) { matrix_scan(); _delay_ms(10); }
     print("done.\n");

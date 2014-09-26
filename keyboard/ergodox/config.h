@@ -29,7 +29,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x1307
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    TMK/Cub
+#define MANUFACTURER    TMK
 #define PRODUCT         Ergodox
 #define DESCRIPTION     t.m.k. keyboard firmware for Ergodox
 
@@ -57,9 +57,10 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
  */
 #define DEBOUNCE        2
 #define TAPPING_TERM    230
+#define TAPPING_TOGGLE  3
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
+//#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 

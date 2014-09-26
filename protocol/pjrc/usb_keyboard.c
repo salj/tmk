@@ -43,6 +43,7 @@ uint8_t keyobard_idle=125;
 
 // count until idle timeout
 uint8_t usb_keyboard_idle_count=0;
+uint8_t keyboard_idle=0;
 
 // 1=num lock, 2=caps lock, 4=scroll lock, 8=compose, 16=kana
 volatile uint8_t usb_keyboard_leds=0;
@@ -74,7 +75,7 @@ void usb_keyboard_print_report(report_keyboard_t *report)
 {
     if (!debug_keyboard) return;
     print("keys: ");
-    for (int i = 0; i < REPORT_KEYS; i++) { phex(report->keys[i]); print(" "); }
+    for (int i = 0; i < KEYBOARD_REPORT_KEYS; i++) { phex(report->keys[i]); print(" "); }
     print(" mods: "); phex(report->mods); print("\n");
 }
 
